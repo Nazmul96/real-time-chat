@@ -30,9 +30,13 @@
     }
     .user-message {
       background-color: #d4edda;
+      float: left;
+      clear: both;
     }
     .other-message {
       background-color: #fff;
+      float: right;
+      clear: both;
     }
     .seen-indicator {
       color: #888;
@@ -46,11 +50,12 @@
     <h5 align="center">{{auth()->user()->name}}</h5>
     <div class="chat-container">
         <div class="chat-box" id="chatBox">
-            <!-- Chat messages will go here -->
-            </div>
-            <div class="input-group">
-            <input type="text" class="form-control" placeholder="Type your message..." id="messageInput">
-            <button class="btn btn-primary" onclick="sendMessage()">Send</button>
+            <div class="message user-message"><span>dfgd</span><span class="seen-indicator"> (Seen)</span></div>
+            <div class="message other-message"><span>dfgd dfge efer ferfert</span><span class="seen-indicator"> (Seen)</span></div>
+        </div>
+        <div class="input-group">
+        <input type="text" class="form-control" placeholder="Type your message..." id="messageInput">
+        <button class="btn btn-primary" onclick="sendMessage()">Send</button>
     </div>
 
 </div>
